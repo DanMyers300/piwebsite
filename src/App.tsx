@@ -13,18 +13,20 @@ import { Contact } from "./pages/Contact.tsx";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="flex flex-col">
+      <div className="flex flex-col min-h-screen">
         <Header />
         <MenuBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/faqs" element={<FAQs />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/faqs" element={<FAQs />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </BrowserRouter>
