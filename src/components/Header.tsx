@@ -1,6 +1,16 @@
 export const Header = () => {
   return (
-    <div className="min-h-16 flex items-center bg-yellow-500 shadow-md px-3 py-3 sm:px-6">
+    <>
+      {/* Grey Top Bar */}
+      <div className="bg-gray-700 text-white text-xs sm:text-sm py-2 px-3 sm:px-6">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
+          <span>Licensed by Texas Commission on Private Security</span>
+          <span>We accept all major credit cards.</span>
+        </div>
+      </div>
+
+      {/* Yellow Contact Bar */}
+      <div className="min-h-16 flex items-center bg-yellow-500 shadow-md px-3 py-3 sm:px-6">
       <div className="flex flex-row sm:flex-row gap-2 sm:gap-4 md:gap-6 items-start sm:items-center justify-between sm:justify-start text-xs sm:text-sm text-white w-full" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.3)' }}>
         {/* Phone Numbers - Stacked on Left */}
         <div className="flex flex-col gap-1">
@@ -61,5 +71,6 @@ export const Header = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
