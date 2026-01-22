@@ -61,7 +61,7 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Notices */}
-        <div className="max-w-6xl mx-auto mt-10 pt-6 pb-6 sm:pb-0 border-t border-gray-600 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-gray-400">
+        <div className="max-w-6xl mx-auto mt-10 pt-6 pb-10 sm:pb-0 border-t border-gray-600 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-gray-400">
           <span>Licensed by Texas Commission on Private Security</span>
           <span>We accept all major credit cards</span>
         </div>
@@ -89,7 +89,7 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-black p-4 sm:p-6 md:p-8 text-center text-gray-400 text-sm">
+      <div className="bg-black pt-10 pb-4 px-4 sm:p-6 md:p-8 text-center text-gray-400 text-sm">
         Copyright 2026 © Watson Private Investigation. All rights reserved.
       </div>
     </footer>
