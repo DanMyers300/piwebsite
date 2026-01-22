@@ -16,7 +16,7 @@ import { BlogSearch } from "./pages/BlogSearch.tsx";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/piwebsite">
       <div className="flex flex-col min-h-screen">
         <Header />
         <MenuBar />
