@@ -1,73 +1,83 @@
-# React + TypeScript + Vite
+# Watson Private Investigation Services
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React website for Watson Private Investigation Services Inc., an Austin, Texas-based private investigation agency.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** with TypeScript
+- **Vite** for build tooling
+- **Tailwind CSS v4** for styling
+- **React Router v7** for navigation
+- **Bun** as the package manager
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- [Bun](https://bun.sh/) installed, or
+- [Nix](https://nixos.org/) for reproducible development environment
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Clone the repository
+git clone <repo-url>
+cd piwebsite
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Install dependencies
+bun install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Start development server
+bun run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Using Nix
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Enter development shell
+nix develop
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Or build and preview
+nix run
 ```
+
+## Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `bun run dev` | Start development server |
+| `bun run build` | Type check and build for production |
+| `bun run preview` | Preview production build |
+| `bun run lint` | Run ESLint |
+
+## Project Structure
+
+```
+src/
+├── assets/          # Images (webp format)
+├── components/      # Reusable UI components
+│   └── blog/        # Blog article components
+├── data/            # Data files (blog posts)
+├── pages/           # Page components
+├── App.tsx          # Router configuration
+├── main.tsx         # Entry point
+└── index.css        # Global styles
+```
+
+## Pages
+
+- **Home** - Hero slideshow, services showcase, testimonials, CTAs
+- **About** - Company history and founder bio
+- **Services** - List of investigation services offered
+- **Testimonials** - Client testimonials
+- **FAQs** - Frequently asked questions
+- **Blog** - Articles with search and tag filtering
+- **Contact** - Contact form and company information
+
+## Features
+
+- Responsive design with mobile-first approach
+- Progressive menu collapse on smaller screens
+- Blog system with keyword and tag-based search
+- Animated hero images and slideshow
+- Reusable components (PageHero, ContactForm)

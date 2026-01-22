@@ -1,76 +1,77 @@
 export const Header = () => {
   return (
-    <>
-      {/* Grey Top Bar */}
-      <div className="bg-gray-700 text-white text-xs sm:text-sm py-2 px-3 sm:px-6">
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
-          <span>Licensed by Texas Commission on Private Security</span>
-          <span>We accept all major credit cards.</span>
-        </div>
-      </div>
-
-      {/* Yellow Contact Bar */}
-      <div className="min-h-16 flex items-center bg-yellow-500 shadow-md px-3 py-3 sm:px-6">
-      <div className="flex flex-row sm:flex-row gap-2 sm:gap-4 md:gap-6 items-start sm:items-center justify-between sm:justify-start text-xs sm:text-sm text-white w-full" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.3)' }}>
-        {/* Phone Numbers - Stacked on Left */}
-        <div className="flex flex-col gap-1">
-          <a
-            href="tel:512-801-9754"
-            className="hover:underline font-medium"
-          >
-            512-801-9754
-          </a>
-          <a
-            href="tel:833-793-0829"
-            className="hover:underline font-medium"
-          >
-            833-793-0829
-          </a>
-        </div>
-
-        {/* Email and Book on Right - Stacked on Mobile */}
-        <div className="flex flex-col gap-2 items-end sm:items-center sm:flex-row sm:gap-4 md:gap-6 sm:h-full">
-          {/* Email */}
-          <div className="flex items-center">
+    <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 shadow-md">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-white text-sm">
+          {/* Phone Numbers */}
+          <div className="flex items-center gap-4 sm:gap-6">
             <a
-              href="mailto:watsonpi2003@yahoo.com"
-              className="hover:underline font-medium flex items-center gap-1 sm:gap-2"
+              href="tel:512-801-9754"
+              className="flex items-center gap-2 hover:text-yellow-100 transition-colors font-medium"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0"
+                className="h-4 w-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              512-801-9754
+            </a>
+            <a
+              href="tel:833-793-0829"
+              className="flex items-center gap-2 hover:text-yellow-100 transition-colors font-medium"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              833-793-0829
+            </a>
+          </div>
+
+          {/* Email and Book */}
+          <div className="flex items-center gap-4 sm:gap-6">
+            <a
+              href="mailto:watsonpi2003@yahoo.com"
+              className="flex items-center gap-2 hover:text-yellow-100 transition-colors font-medium"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg>
-              <span className="hidden sm:inline">watsonpi2003@yahoo.com</span>
+              <span className="hidden md:inline">watsonpi2003@yahoo.com</span>
+              <span className="md:hidden">Email</span>
             </a>
-          </div>
-
-          {/* Buy My New Book */}
-          <div className="flex items-center">
             <a
               href="https://amazon.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline font-medium flex items-center gap-1 sm:gap-2"
+              className="flex items-center gap-2 bg-white text-yellow-600 hover:bg-yellow-100 px-3 py-1.5 rounded-full font-semibold transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0"
+                className="h-4 w-4"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
                 <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
               </svg>
-              Buy My New Book
+              Buy My Book
             </a>
           </div>
         </div>
       </div>
     </div>
-    </>
   );
 };

@@ -13,7 +13,7 @@ export const SecondCallToAction = () => {
       </p>
       <div className="w-16 sm:w-24 h-1 bg-yellow-500 mx-auto my-4"></div>
       <p className="text-lg sm:text-xl font-bold text-gray-800 px-4">
-        Call <a href="tel:4698479401" className="text-yellow-500 hover:text-yellow-600 transition-colors">469-847-9401</a> NOW!
+        Call <a href="tel:5128019754" className="text-yellow-500 hover:text-yellow-600 transition-colors">512-801-9754</a> NOW!
       </p>
     </div>
   );

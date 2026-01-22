@@ -14,10 +14,10 @@ export const CallToAction = () => {
       </div>
       <div className="flex-shrink-0 md:mr-[10%]">
         <a
-          href="tel:4698479401"
+          href="tel:5128019754"
           className="bg-yellow-500 text-black font-bold text-lg sm:text-xl px-6 py-3 sm:py-4 rounded block hover:bg-yellow-600 transition-colors text-center whitespace-nowrap"
         >
-          (469) 847-9401
+          (512) 801-9754
         </a>
       </div>
     </div>
