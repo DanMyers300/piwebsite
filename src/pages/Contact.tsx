@@ -62,11 +62,7 @@ export const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Phone</h3>
                     <p>
-                      <a href="tel:512-265-7313" className="text-gray-300 hover:text-yellow-500 transition-colors">512-265-7313</a>
-                    </p>
-                    <p className="text-gray-400 text-sm">or</p>
-                    <p>
-                      <a href="tel:833-793-0829" className="text-gray-300 hover:text-yellow-500 transition-colors">833-793-0829</a>
+                      <a href="tel:512-801-9754" className="text-gray-300 hover:text-yellow-500 transition-colors">512-801-9754</a>
                     </p>
                   </div>
                 </div>

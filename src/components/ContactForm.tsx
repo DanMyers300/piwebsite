@@ -8,7 +8,7 @@ interface ContactFormProps {
 export const ContactForm = ({
   email = "test@danmyers.net",
   highlights = [
-    "15 years experience LAPD",
+    "23 years experience LAPD",
     "State Certified",
     "Confidential & Discreet",
     "References Available",

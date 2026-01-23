@@ -49,7 +49,7 @@ export const Services = () => {
                   <h3 className="font-bold">SURVEILLANCE</h3>
                 </div>
                 <div className="p-5">
-                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base">Watson Private Investigation has over 15 years of surveillance experience. Conducting successful surveillance takes patience and experience. Proper surveillance will supply the customer with everything they will need to prove their case.</p>
+                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base">Watson Private Investigation has over 23 years of surveillance experience. Conducting successful surveillance takes patience and experience. Proper surveillance will supply the customer with everything they will need to prove their case.</p>
                 </div>
               </div>
 

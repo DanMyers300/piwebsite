@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     question: "Why should I hire Watson Private Investigation Services Inc.?",
-    answer: "Watson Private Investigation has over 20 years experience with the Los Angeles Police Department and private investigations. David Watson has been involved in operations with the anti-terrorist division, organized crime, vice, undercover operations, patrol watch commander, and numerous other operations. He has personally trained his investigators. You won't find a more experienced investigation company to get the answers you need for your peace of mind.",
+    answer: "Watson Private Investigation has over 23 years experience with the Los Angeles Police Department and private investigations. David Watson has been involved in operations with the anti-terrorist division, organized crime, vice, undercover operations, patrol watch commander, and numerous other operations. He has personally trained his investigators. You won't find a more experienced investigation company to get the answers you need for your peace of mind.",
   },
   {
     question: "How will the surveillance be reported to me?",

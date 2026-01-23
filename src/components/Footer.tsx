@@ -11,7 +11,7 @@ export const Footer = () => {
               <span className="text-gray-300">Specialties:</span> Criminal, Insurance Fraud, Missing Persons (criminal and civil)
             </p>
             <p className="text-sm leading-relaxed">
-              Dave is a traditional and highly experienced investigator. With over 19 years at LAPD and then 15 years as a Texas PI, he has handled thousands of successful cases. At LAPD he worked patrol, VICE, Internal Affairs and at the elite Metro Division. Promoted quickly to Sergeant he also served as a Watch Commander, VICE Supervisor, assistant to a Captain, an assistant to a Commander. Dave finished his time with the LAPD in the Criminal Intelligence Group.
+              Dave is a traditional and highly experienced investigator. With over 19 years at LAPD and then 23 years as a Texas PI, he has handled thousands of successful cases. At LAPD he worked patrol, VICE, Internal Affairs and at the elite Metro Division. Promoted quickly to Sergeant he also served as a Watch Commander, VICE Supervisor, assistant to a Captain, an assistant to a Commander. Dave finished his time with the LAPD in the Criminal Intelligence Group.
             </p>
           </div>
 
@@ -33,14 +33,11 @@ export const Footer = () => {
                 <a href="tel:512-801-9754" className="hover:text-yellow-500 transition-colors">512-801-9754</a>
               </p>
               <p>
-                <a href="tel:833-793-0829" className="hover:text-yellow-500 transition-colors">833-793-0829</a>
-              </p>
-              <p>
                 <a href="mailto:watsonpi2003@yahoo.com" className="hover:text-yellow-500 transition-colors">watsonpi2003@yahoo.com</a>
               </p>
               <p className="pt-2">
                 <a
-                  href="https://amazon.com"
+                  href="https://www.amazon.com/Cheating-Secrets-Through-Private-Investigator/dp/1667891847"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-yellow-500 hover:text-yellow-400 transition-colors"

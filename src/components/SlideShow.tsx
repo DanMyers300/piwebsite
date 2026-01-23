@@ -40,10 +40,10 @@ export const SlideShow = () => {
           Free Consultation with Our Lead Private Investigator!
         </h2>
         <a
-          href="tel:512-265-7313"
+          href="tel:512-801-9754"
           className="text-yellow-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 sm:mb-6 hover:text-yellow-300 transition-colors drop-shadow-lg"
         >
-          Call 512-265-7313 NOW!
+          Call 512-801-9754 NOW!
         </a>
         <p className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl leading-relaxed drop-shadow-md">
           We're an Austin Texas private investigation agency,
