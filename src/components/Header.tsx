@@ -1,8 +1,8 @@
 export const Header = () => {
   return (
     <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 shadow-md">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-white text-sm">
+      <div className="max-w-6xl xl:max-w-none mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-3 text-white text-sm">
           {/* Phone Numbers */}
           <div className="flex items-center gap-4 sm:gap-6">
             <a
