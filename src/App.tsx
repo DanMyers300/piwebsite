@@ -1,6 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 import { Header } from "./components/Header.tsx";
 import { Footer } from "./components/Footer.tsx";
+
+const ExternalRedirect = ({ url }: { url: string }) => {
+  useEffect(() => {
+    window.location.href = url;
+  }, [url]);
+  return null;
+};
 import { MenuBar } from "./components/MenuBar.tsx";
 import { Home } from "./pages/Home.tsx";
 import { About } from "./pages/About.tsx";
@@ -33,6 +41,7 @@ const App = () => {
             <Route path="/blog/best-way-to-hire-a-private-investigator" element={<BestWayToHireAPrivateInvestigator />} />
             <Route path="/blog/finding-a-private-investigator-infidelity" element={<FindingAPrivateInvestigatorInfidelity />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/admin" element={<ExternalRedirect url="https://cloud.umami.is" />} />
           </Routes>
         </div>
         <Footer />
