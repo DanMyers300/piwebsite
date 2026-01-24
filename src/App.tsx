@@ -13,6 +13,7 @@ import { SignsOfACheatingSpouse } from "./components/blog/SignsOfACheatingSpouse
 import { BestWayToHireAPrivateInvestigator } from "./components/blog/BestWayToHireAPrivateInvestigator.tsx";
 import { FindingAPrivateInvestigatorInfidelity } from "./components/blog/FindingAPrivateInvestigatorInfidelity.tsx";
 import { BlogSearch } from "./pages/BlogSearch.tsx";
+import { NotFound } from "./pages/NotFound.tsx";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="/blog/best-way-to-hire-a-private-investigator" element={<BestWayToHireAPrivateInvestigator />} />
             <Route path="/blog/finding-a-private-investigator-infidelity" element={<FindingAPrivateInvestigatorInfidelity />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
         <Footer />
