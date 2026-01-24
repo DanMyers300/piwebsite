@@ -19,7 +19,7 @@ export const Contact = () => {
     e.preventDefault();
     const subject = `Contact Request from ${formData.firstName} ${formData.lastName}`;
     const body = `First Name: ${formData.firstName}%0D%0ALast Name: ${formData.lastName}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0A%0D%0AMessage:%0D%0A${formData.comments}`;
-    window.location.href = `mailto:test@danmyers.net?subject=${encodeURIComponent(subject)}&body=${body}`;
+    window.location.href = `mailto:watsonpi2003@yahoo.com?subject=${encodeURIComponent(subject)}&body=${body}`;
   };
 
   return (
