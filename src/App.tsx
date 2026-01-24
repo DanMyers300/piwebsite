@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 import { Header } from "./components/Header.tsx";
 import { Footer } from "./components/Footer.tsx";
 import { MenuBar } from "./components/MenuBar.tsx";
@@ -14,6 +15,13 @@ import { BestWayToHireAPrivateInvestigator } from "./components/blog/BestWayToHi
 import { FindingAPrivateInvestigatorInfidelity } from "./components/blog/FindingAPrivateInvestigatorInfidelity.tsx";
 import { BlogSearch } from "./pages/BlogSearch.tsx";
 import { NotFound } from "./pages/NotFound.tsx";
+
+const ExternalRedirect = ({ url }: { url: string }) => {
+  useEffect(() => {
+    window.location.replace(url);
+  }, [url]);
+  return null;
+};
 
 const App = () => {
   return (
@@ -34,6 +42,7 @@ const App = () => {
             <Route path="/blog/best-way-to-hire-a-private-investigator" element={<BestWayToHireAPrivateInvestigator />} />
             <Route path="/blog/finding-a-private-investigator-infidelity" element={<FindingAPrivateInvestigatorInfidelity />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/admin" element={<ExternalRedirect url="https://cloud.umami.is" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
