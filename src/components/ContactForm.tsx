@@ -52,7 +52,7 @@ export const ContactForm = ({
           from_email: formData.email,
           phone: formData.phone,
           message: formData.comments,
-          to_email: "contact@danmyers.net",
+          to_email: "watsonpi2003@yahoo.com",
         },
         publicKey
       );
