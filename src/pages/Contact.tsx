@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import LA from "../assets/LA.webp";
 import { PageHero } from "../components/PageHero";
 
@@ -10,16 +11,49 @@ export const Contact = () => {
     phone: "",
     comments: "",
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = `Contact Request from ${formData.firstName} ${formData.lastName}`;
-    const body = `First Name: ${formData.firstName}%0D%0ALast Name: ${formData.lastName}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0A%0D%0AMessage:%0D%0A${formData.comments}`;
-    window.location.href = `mailto:watsonpi2003@yahoo.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    setStatus("sending");
+    setErrorMessage("");
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus("error");
+      setErrorMessage("Email service is not configured. Please contact us directly.");
+      console.error("EmailJS configuration error: Missing environment variables");
+      return;
+    }
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: `${formData.firstName} ${formData.lastName}`,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.comments,
+          to_email: "contact@danmyers.net",
+        },
+        publicKey
+      );
+      setStatus("success");
+      setFormData({ firstName: "", lastName: "", email: "", phone: "", comments: "" });
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage("Failed to send message. Please try again or contact us directly.");
+      console.error("EmailJS error:", error);
+    }
   };
 
   return (
@@ -170,10 +204,23 @@ export const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 rounded-lg transition-colors shadow-md hover:shadow-lg"
+                  disabled={status === "sending"}
+                  className="w-full bg-yellow-500 hover:bg-yellow-600 disabled:bg-yellow-300 disabled:cursor-not-allowed text-white font-bold py-4 rounded-lg transition-colors shadow-md hover:shadow-lg"
                 >
-                  Send Message
+                  {status === "sending" ? "Sending..." : "Send Message"}
                 </button>
+
+                {status === "success" && (
+                  <div className="p-4 bg-green-100 text-green-700 rounded-lg">
+                    Thank you! Your message has been sent successfully. We'll get back to you soon.
+                  </div>
+                )}
+
+                {status === "error" && (
+                  <div className="p-4 bg-red-100 text-red-700 rounded-lg">
+                    {errorMessage}
+                  </div>
+                )}
               </form>
             </div>
           </div>
