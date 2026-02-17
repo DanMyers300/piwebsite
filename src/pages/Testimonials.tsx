@@ -26,10 +26,10 @@ export const Testimonials = () => {
           <div className="md:w-2/3">
             <div className="space-y-6">
               {/* Child Custody */}
-              <div className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
+              <article className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-yellow-500 rounded-full p-2 shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
@@ -40,17 +40,17 @@ export const Testimonials = () => {
                       <p><strong>Well, two days later, YES TWO DAYS, I received a phone call from Mr. Watson stating that he had located my wife and children.</strong> My attorney in Hawaii then forwarded him the documents to have her served. She was served and jurisdiction was then held in Hawaii and she was forced to bring my children back home.</p>
                       <p>If it weren't for that one call to <strong>Watson Private Investigation Services</strong>, my relationship with my children would have been overseas. Today, I am looking over the beaches once again with my two boys, in fact, we are going surfing today.</p>
                       <p>Thank you, Mr. Watson, I should hope that if anyone ever has to go through the hardships that I have endured that they are lucky enough to have read this and call you.</p>
-                      <p className="text-yellow-600 font-semibold mt-2">— Client / Hawaii</p>
+                      <p className="text-gray-700 font-semibold mt-2">— Client / Hawaii</p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
 
               {/* Missing Person */}
-              <div className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
+              <article className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-yellow-500 rounded-full p-2 shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
@@ -62,17 +62,17 @@ export const Testimonials = () => {
                       <p>Upon advice from an attorney friend of mine, I contacted Dave Watson. I felt awkward telling him that I had lost my daughter to a stranger, even worse one that I allowed to move in my own home. <strong>Mr. Watson made that feeling go away. He then immediately began to implement a plan of action upon gathering all of my information.</strong></p>
                       <p>He located my daughter who was being used to run drugs and was forced to work at a strip club. He then advised me to purchase an airline ticket from Austin to San Francisco for my daughter and assisted in scheduling my flight to and from Austin. Mr. Watson established a meeting place for me and my daughter in an open public location and monitored for any outside intervention. He was our guardian.</p>
                       <p><strong>I was reunited with my daughter and we immediately flew back to San Francisco. Thank you so much, Dave, you have redirected my daughter's life and future.</strong></p>
-                      <p className="text-yellow-600 font-semibold mt-2">— Client / San Francisco</p>
+                      <p className="text-gray-700 font-semibold mt-2">— Client / San Francisco</p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
 
               {/* Surveillance */}
-              <div className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
+              <article className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-yellow-500 rounded-full p-2 shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
@@ -83,17 +83,17 @@ export const Testimonials = () => {
                       <p>I first contacted Mr. Watson who spoke with me for an hour on the telephone. <strong>I learned that he was an LAPD veteran and had extensive training; this made me feel much more comfortable speaking with him on a personal level.</strong> I learned that he had conducted numerous investigations where our military, both men and women, were overseas fighting for our country while our significant others had their personal desires on their front line.</p>
                       <p>I was lost and did not know where to turn; my immediate family all resided out of the United States, only my wife and child were in the state of Texas, the state I now call home. Mr. Watson recommended surveillance to be established on my wife. The results of the investigation were difficult to accept. I learned that she was not only having an affair but an affair with one of the guys that I had bunked with at boot camp years earlier.</p>
                       <p><strong>A consultation with Mr. Watson was held once I returned to the states and he briefed me on everything, including the hard to watch video. He then established an attorney to fight for me and my son.</strong> I cannot thank you enough, Mr. Watson, for the diligent work and professional attitude through all of my emotional turmoil.</p>
-                      <p className="text-yellow-600 font-semibold mt-2">— Client / Military - Killeen</p>
+                      <p className="text-gray-700 font-semibold mt-2">— Client / Military - Killeen</p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
 
               {/* Infidelity 1 */}
-              <div className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
+              <article className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-yellow-500 rounded-full p-2 shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
@@ -104,17 +104,17 @@ export const Testimonials = () => {
                       <p><strong>I was not on the phone for five minutes with Mr. Watson when all of those fears subsided. He was kind and caring, not in the sense that you feel you are being sold, but he genuinely listened and responded to each of my concerns.</strong> For the first time in over six months, I knew that I was going to be OK. He gave me a new found confidence within myself. I began to realize that I could be strong and fight for myself and my children.</p>
                       <p><strong>The information obtained through his investigation changed my whole life.</strong> I never realized that my husband of over ten years was living a second life with another family. How could I have been so blind?</p>
                       <p>I did not know any attorneys or where to turn once he showed me the facts. <strong>Mr. Watson coordinated a meeting between me and his recommended attorney who performed flawlessly.</strong> I am now living my new found life with my children and have the financial support to do so, thanks to the evidence that Mr. Watson presented in court.</p>
-                      <p className="text-yellow-600 font-semibold mt-2">— Client / Austin</p>
+                      <p className="text-gray-700 font-semibold mt-2">— Client / Austin</p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
 
               {/* Law Firm */}
-              <div className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
+              <article className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-yellow-500 rounded-full p-2 shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
@@ -127,13 +127,13 @@ export const Testimonials = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
 
               {/* Infidelity 2 */}
-              <div className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
+              <article className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-yellow-500 rounded-full p-2 shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
@@ -145,13 +145,13 @@ export const Testimonials = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
 
               {/* Infidelity 3 */}
-              <div className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
+              <article className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-yellow-500 rounded-full p-2 shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
@@ -162,13 +162,13 @@ export const Testimonials = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
 
               {/* Missing Person 2 */}
-              <div className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
+              <article className="bg-white border-l-4 border-yellow-500 shadow-md rounded-r-lg p-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-yellow-500 rounded-full p-2 shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
@@ -179,7 +179,7 @@ export const Testimonials = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
           </div>
 

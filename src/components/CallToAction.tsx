@@ -15,6 +15,7 @@ export const CallToAction = () => {
       <div className="flex-shrink-0 md:mr-[10%]">
         <a
           href="tel:5128019754"
+          aria-label="Call 512-801-9754"
           className="bg-yellow-500 text-black font-bold text-lg sm:text-xl px-6 py-3 sm:py-4 rounded block hover:bg-yellow-600 transition-colors text-center whitespace-nowrap"
         >
           (512) 801-9754

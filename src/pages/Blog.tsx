@@ -27,6 +27,7 @@ export const Blog = () => {
               className="h-5 w-5 group-hover:scale-110 transition-transform"
               viewBox="0 0 20 20"
               fill="currentColor"
+              aria-hidden="true"
             >
               <path
                 fillRule="evenodd"
@@ -60,7 +61,7 @@ export const Blog = () => {
                       <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-3">
                         {post.excerpt}
                       </p>
-                      <Link to={post.slug} className="text-yellow-500 hover:text-yellow-600 font-semibold text-sm transition-colors">
+                      <Link to={post.slug} aria-label={`Read more about ${post.title}`} className="text-yellow-500 hover:text-yellow-600 font-semibold text-sm transition-colors">
                         Read More →
                       </Link>
                       <p className="text-gray-400 text-xs mt-3">
@@ -85,6 +86,7 @@ export const Blog = () => {
                 className="h-5 w-5 group-hover:scale-110 transition-transform"
                 viewBox="0 0 20 20"
                 fill="currentColor"
+                aria-hidden="true"
               >
                 <path
                   fillRule="evenodd"
