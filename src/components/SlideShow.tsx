@@ -6,25 +6,32 @@ import insurance from "../assets/insurance.webp";
 import divorce from "../assets/divorce.webp";
 import investigator from "../assets/investigator.webp";
 
-const images = [investigator, justice, civil, debugging, insurance, divorce];
+const slides = [
+  { image: investigator, alt: "Private investigator conducting surveillance" },
+  { image: justice, alt: "Scales of justice representing legal investigations" },
+  { image: civil, alt: "Civil investigation case documentation" },
+  { image: debugging, alt: "Electronic debugging and counter-surveillance equipment" },
+  { image: insurance, alt: "Insurance fraud investigation" },
+  { image: divorce, alt: "Divorce and infidelity investigation services" },
+];
 
 export const SlideShow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((i) => (i === images.length - 1 ? 0 : i + 1));
+      setCurrentIndex((i) => (i === slides.length - 1 ? 0 : i + 1));
     }, 8000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] relative overflow-hidden">
-      {images.map((image, index) => (
+      {slides.map((slide, index) => (
         <img
           key={index}
-          src={image}
-          alt={`Slide ${index + 1}`}
+          src={slide.image}
+          alt={slide.alt}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}

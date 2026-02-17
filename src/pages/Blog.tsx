@@ -2,10 +2,16 @@ import { Link } from "react-router-dom";
 import LA from "../assets/LA.webp";
 import { PageHero } from "../components/PageHero";
 import { blogPosts } from "../data/blogData";
+import { SEO } from "../components/SEO";
 
 export const Blog = () => {
   return (
     <div>
+      <SEO
+        title="Blog | Watson PI Services"
+        description="Expert articles on private investigation, infidelity signs, hiring a PI, and more from Watson Private Investigation Services."
+        path="/blog"
+      />
       <PageHero image={LA} title="BLOG" imageAlt="Los Angeles" />
 
       {/* Content */}

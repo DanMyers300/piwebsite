@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Header } from "./components/Header.tsx";
 import { Footer } from "./components/Footer.tsx";
@@ -16,6 +16,14 @@ import { FindingAPrivateInvestigatorInfidelity } from "./components/blog/Finding
 import { BlogSearch } from "./pages/BlogSearch.tsx";
 import { NotFound } from "./pages/NotFound.tsx";
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
 const ExternalRedirect = ({ url }: { url: string }) => {
   useEffect(() => {
     window.location.replace(url);
@@ -26,6 +34,7 @@ const ExternalRedirect = ({ url }: { url: string }) => {
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Header />
         <MenuBar />

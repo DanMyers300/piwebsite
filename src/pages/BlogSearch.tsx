@@ -3,6 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import LA from "../assets/LA.webp";
 import { PageHero } from "../components/PageHero";
 import { blogPosts, allTags } from "../data/blogData";
+import { SEO } from "../components/SEO";
 
 export const BlogSearch = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -55,6 +56,11 @@ export const BlogSearch = () => {
 
   return (
     <div>
+      <SEO
+        title="Search Blog | Watson PI Services"
+        description="Search articles on private investigation, infidelity, hiring a PI, and more from Watson Private Investigation Services."
+        path="/blog/search"
+      />
       <PageHero image={LA} title="SEARCH BLOG" imageAlt="Los Angeles" />
 
       {/* Content */}

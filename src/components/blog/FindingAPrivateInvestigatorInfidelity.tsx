@@ -1,11 +1,45 @@
+import { Helmet } from "react-helmet-async";
 import LA from "../../assets/LA.webp";
 import { PageHero } from "../PageHero";
+import { SEO } from "../SEO";
 import { Link } from "react-router-dom";
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Finding a Private Investigator who takes on Infidelity Cases",
+  datePublished: "2020-06-16",
+  author: {
+    "@type": "Person",
+    name: "David Watson",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Watson Private Investigation Services Inc.",
+  },
+  description:
+    "How to find a qualified private investigator for infidelity cases. Protect your interests with professional surveillance and evidence gathering.",
+};
 
 export const FindingAPrivateInvestigatorInfidelity = () => {
   return (
     <div>
-      <PageHero image={LA} title="BLOG" imageAlt="Los Angeles" />
+      <SEO
+        title="Finding a Private Investigator for Infidelity Cases | Watson PI Services"
+        description="How to find a qualified private investigator for infidelity cases. Protect your interests with professional surveillance and evidence gathering."
+        path="/blog/finding-a-private-investigator-infidelity"
+        type="article"
+        article={{
+          publishedTime: "2020-06-16",
+          tags: ["private investigator infidelity", "infidelity private investigator"],
+        }}
+      />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+      </Helmet>
+      <PageHero image={LA} title="BLOG" imageAlt="Finding a private investigator for infidelity cases blog article" />
 
       {/* Content */}
       <div className="p-6 sm:p-8 md:p-12 lg:p-16">

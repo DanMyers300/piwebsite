@@ -1,6 +1,7 @@
 import LA from "../assets/LA.webp";
 import { PageHero } from "../components/PageHero";
 import { ContactForm } from "../components/ContactForm";
+import { SEO } from "../components/SEO";
 
 const servicesHighlights = [
   "Background Checks",
@@ -26,6 +27,11 @@ const servicesHighlights = [
 export const Services = () => {
   return (
     <div>
+      <SEO
+        title="Services | Watson PI Services"
+        description="Professional PI services including surveillance, infidelity investigation, background checks, insurance fraud, civil & criminal cases."
+        path="/services"
+      />
       <PageHero image={LA} title="SERVICES" imageAlt="Los Angeles" />
 
       {/* Content */}

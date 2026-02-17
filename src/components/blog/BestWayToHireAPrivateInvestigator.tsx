@@ -1,11 +1,45 @@
+import { Helmet } from "react-helmet-async";
 import LA from "../../assets/LA.webp";
 import { PageHero } from "../PageHero";
+import { SEO } from "../SEO";
 import { Link } from "react-router-dom";
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Best Way To Hire A Private Investigator",
+  datePublished: "2020-06-09",
+  author: {
+    "@type": "Person",
+    name: "David Watson",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Watson Private Investigation Services Inc.",
+  },
+  description:
+    "Expert tips on hiring a private investigator — check licensing, meet in person, verify references, and find the right PI for your case.",
+};
 
 export const BestWayToHireAPrivateInvestigator = () => {
   return (
     <div>
-      <PageHero image={LA} title="BLOG" imageAlt="Los Angeles" />
+      <SEO
+        title="Best Way To Hire A Private Investigator | Watson PI Services"
+        description="Expert tips on hiring a private investigator — check licensing, meet in person, verify references, and find the right PI for your case."
+        path="/blog/best-way-to-hire-a-private-investigator"
+        type="article"
+        article={{
+          publishedTime: "2020-06-09",
+          tags: ["hire private investigator", "how to hire a pi", "best ways to hire a pi"],
+        }}
+      />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+      </Helmet>
+      <PageHero image={LA} title="BLOG" imageAlt="Best way to hire a private investigator blog article" />
 
       {/* Content */}
       <div className="p-6 sm:p-8 md:p-12 lg:p-16">

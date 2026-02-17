@@ -1,6 +1,7 @@
 import LA from "../assets/LA.webp";
 import { PageHero } from "../components/PageHero";
 import { ContactForm } from "../components/ContactForm";
+import { SEO } from "../components/SEO";
 
 const testimonialsHighlights = [
   "David Watson",
@@ -11,6 +12,11 @@ const testimonialsHighlights = [
 export const Testimonials = () => {
   return (
     <div>
+      <SEO
+        title="Testimonials | Watson PI Services"
+        description="Read what clients say about Watson Private Investigation Services. Real testimonials from satisfied customers."
+        path="/testimonials"
+      />
       <PageHero image={LA} title="TESTIMONIALS" imageAlt="Los Angeles" />
 
       {/* Content */}
