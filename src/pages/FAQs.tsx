@@ -1,6 +1,7 @@
 import LA from "../assets/LA.webp";
 import { PageHero } from "../components/PageHero";
 import { ContactForm } from "../components/ContactForm";
+import { SEO } from "../components/SEO";
 
 const faqs = [
   {
@@ -40,6 +41,11 @@ const faqs = [
 export const FAQs = () => {
   return (
     <div>
+      <SEO
+        title="FAQs | Watson PI Services"
+        description="Frequently asked questions about hiring a private investigator, costs, confidentiality, and our investigation process."
+        path="/faqs"
+      />
       <PageHero image={LA} title="FAQs" imageAlt="Los Angeles" />
 
       {/* Content */}

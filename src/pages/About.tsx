@@ -1,10 +1,16 @@
 import LA from "../assets/LA.webp";
 import { PageHero } from "../components/PageHero";
 import { ContactForm } from "../components/ContactForm";
+import { SEO } from "../components/SEO";
 
 export const About = () => {
   return (
     <div>
+      <SEO
+        title="About Us | Watson PI Services"
+        description="Meet Dave Watson — former LAPD sergeant with extensive law enforcement experience. Learn about his background in investigations."
+        path="/about"
+      />
       <PageHero image={LA} title="ABOUT US" imageAlt="Los Angeles" />
 
       {/* Content */}

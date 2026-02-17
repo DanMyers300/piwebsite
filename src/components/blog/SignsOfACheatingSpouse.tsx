@@ -1,11 +1,45 @@
+import { Helmet } from "react-helmet-async";
 import LA from "../../assets/LA.webp";
 import { PageHero } from "../PageHero";
+import { SEO } from "../SEO";
 import { Link } from "react-router-dom";
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Signs of a Cheating Spouse",
+  datePublished: "2015-04-15",
+  author: {
+    "@type": "Person",
+    name: "David Watson",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Watson Private Investigation Services Inc.",
+  },
+  description:
+    "Learn the common signs of a cheating spouse including routine changes, attire, cell phone behavior, and more from an experienced private investigator.",
+};
 
 export const SignsOfACheatingSpouse = () => {
   return (
     <div>
-      <PageHero image={LA} title="BLOG" imageAlt="Los Angeles" />
+      <SEO
+        title="Signs of a Cheating Spouse | Watson PI Services"
+        description="Learn the common signs of a cheating spouse including routine changes, attire, cell phone behavior, and more from an experienced private investigator."
+        path="/blog/signs-of-a-cheating-spouse"
+        type="article"
+        article={{
+          publishedTime: "2015-04-15",
+          tags: ["Private Investigator Austin TX", "Private Investigation Services Austin TX", "Private Investigators Austin TX"],
+        }}
+      />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+      </Helmet>
+      <PageHero image={LA} title="BLOG" imageAlt="Signs of a cheating spouse blog article" />
 
       {/* Content */}
       <div className="p-6 sm:p-8 md:p-12 lg:p-16">

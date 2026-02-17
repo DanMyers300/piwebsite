@@ -2,6 +2,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import LA from "../assets/LA.webp";
 import { PageHero } from "../components/PageHero";
+import { SEO } from "../components/SEO";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -58,6 +59,11 @@ export const Contact = () => {
 
   return (
     <div>
+      <SEO
+        title="Contact Us | Watson PI Services"
+        description="Get in touch with Watson Private Investigation Services. Free confidential consultation. Call or fill out our contact form."
+        path="/contact"
+      />
       <PageHero image={LA} title="CONTACT US" imageAlt="Los Angeles" />
 
       {/* Content */}
