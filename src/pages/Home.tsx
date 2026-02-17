@@ -8,10 +8,14 @@ import { SEO } from "../components/SEO";
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["ProfessionalService", "Organization"],
   name: "Watson Private Investigation Services Inc.",
-  url: "https://watsonpiservices.com",
-  logo: "https://watsonpiservices.com/logo.webp",
+  url: "https://watsonpiinvestigation.com",
+  logo: "https://watsonpiinvestigation.com/logo.webp",
+  image: "https://watsonpiinvestigation.com/logo.webp",
+  telephone: "+1-512-801-9754",
+  email: "watsonpi2003@yahoo.com",
+  priceRange: "$$",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+1-512-801-9754",
@@ -26,6 +30,20 @@ const organizationSchema = {
     postalCode: "78630-2338",
     addressCountry: "US",
   },
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Austin",
+      addressRegion: "TX",
+    },
+    {
+      "@type": "City",
+      name: "Los Angeles",
+      addressRegion: "CA",
+    },
+  ],
+  description:
+    "Licensed private investigator offering surveillance, background checks, infidelity investigations, missing persons, and more. Over 23 years of experience with LAPD and private investigations.",
 };
 
 export const Home = () => {

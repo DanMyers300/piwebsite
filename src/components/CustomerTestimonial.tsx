@@ -11,6 +11,7 @@ export const CustomerTestimonial = () => {
         {/* Quote icon */}
         <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-gray-600 w-10 h-10 rounded flex items-center justify-center shadow-md">
           <svg
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6 text-white"
             fill="currentColor"

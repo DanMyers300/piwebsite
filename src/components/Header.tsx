@@ -1,15 +1,17 @@
 export const Header = () => {
   return (
-    <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 shadow-md">
+    <header className="bg-gradient-to-r from-yellow-500 to-yellow-600 shadow-md">
       <div className="max-w-6xl xl:max-w-none mx-auto px-4 sm:px-6 lg:px-8 py-3">
-        <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-3 text-white text-sm">
+        <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-3 text-gray-900 text-sm">
           {/* Phone Numbers */}
           <div className="flex items-center gap-4 sm:gap-6">
             <a
               href="tel:512-801-9754"
-              className="flex items-center gap-2 hover:text-yellow-100 transition-colors font-medium"
+              aria-label="Call 512-801-9754"
+              className="flex items-center gap-2 hover:underline transition-colors font-medium"
             >
               <svg
+                aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4"
                 viewBox="0 0 20 20"
@@ -25,9 +27,10 @@ export const Header = () => {
           <div className="flex items-center justify-center gap-4 sm:gap-6">
             <a
               href="mailto:watsonpi2003@yahoo.com"
-              className="flex items-center gap-2 hover:text-yellow-100 transition-colors font-medium"
+              className="flex items-center gap-2 hover:underline transition-colors font-medium"
             >
               <svg
+                aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4"
                 viewBox="0 0 20 20"
@@ -43,9 +46,10 @@ export const Header = () => {
               href="https://www.amazon.com/Cheating-Secrets-Through-Private-Investigator/dp/1667891847"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-white text-yellow-600 hover:bg-yellow-100 px-3 py-1.5 rounded-full font-semibold transition-colors"
+              className="flex items-center gap-2 bg-white text-gray-800 hover:bg-gray-100 px-3 py-1.5 rounded-full font-semibold transition-colors"
             >
               <svg
+                aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4"
                 viewBox="0 0 20 20"
@@ -58,6 +62,6 @@ export const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };

@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 const SITE_NAME = "Watson PI Services";
-const SITE_URL = "https://watsonpiservices.com";
+const SITE_URL = "https://watsonpiinvestigation.com";
 const DEFAULT_IMAGE = `${SITE_URL}/logo.webp`;
 
 interface SEOProps {

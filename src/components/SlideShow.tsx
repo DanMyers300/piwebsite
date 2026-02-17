@@ -26,12 +26,13 @@ export const SlideShow = () => {
   }, []);
 
   return (
-    <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] relative overflow-hidden">
+    <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] relative overflow-hidden" role="region" aria-label="Image slideshow">
       {slides.map((slide, index) => (
         <img
           key={index}
           src={slide.image}
           alt={slide.alt}
+          aria-hidden={index !== currentIndex}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
@@ -43,11 +44,12 @@ export const SlideShow = () => {
 
       {/* Text overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-        <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 drop-shadow-lg">
+        <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 drop-shadow-lg">
           Free Consultation with Our Lead Private Investigator!
-        </h2>
+        </h1>
         <a
           href="tel:512-801-9754"
+          aria-label="Call 512-801-9754"
           className="text-yellow-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 sm:mb-6 hover:text-yellow-300 transition-colors drop-shadow-lg"
         >
           Call 512-801-9754 NOW!

@@ -71,7 +71,7 @@ export const BlogSearch = () => {
             to="/blog"
             className="inline-flex items-center text-yellow-500 hover:text-yellow-600 font-semibold mb-6 transition-colors"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
             </svg>
             Back to Blog
@@ -83,11 +83,12 @@ export const BlogSearch = () => {
 
             {/* Keyword Search */}
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="blog-search" className="block text-sm font-medium text-gray-700 mb-2">
                 Search by Keywords
               </label>
               <div className="relative">
                 <input
+                  id="blog-search"
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -95,6 +96,7 @@ export const BlogSearch = () => {
                   className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                 />
                 <svg
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2"
                   viewBox="0 0 20 20"
@@ -182,7 +184,7 @@ export const BlogSearch = () => {
                             className={`text-xs px-2 py-0.5 rounded-full transition-colors ${
                               selectedTags.includes(tag)
                                 ? "bg-yellow-500 text-white"
-                                : "bg-gray-100 text-gray-500 hover:bg-yellow-500 hover:text-white"
+                                : "bg-gray-100 text-gray-500 hover:bg-yellow-500 hover:text-gray-900"
                             }`}
                           >
                             {tag}
@@ -191,6 +193,7 @@ export const BlogSearch = () => {
                       </div>
                       <Link
                         to={post.slug}
+                        aria-label={`Read more about ${post.title}`}
                         className="text-yellow-500 hover:text-yellow-600 font-semibold text-sm transition-colors"
                       >
                         Read More →
@@ -202,6 +205,7 @@ export const BlogSearch = () => {
             ) : (
               <div className="bg-gray-50 rounded-lg p-8 text-center">
                 <svg
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-12 w-12 text-gray-300 mx-auto mb-4"
                   fill="none"

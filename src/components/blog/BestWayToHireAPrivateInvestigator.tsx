@@ -21,6 +21,31 @@ const articleSchema = {
     "Expert tips on hiring a private investigator — check licensing, meet in person, verify references, and find the right PI for your case.",
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://watsonpiinvestigation.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Blog",
+      item: "https://watsonpiinvestigation.com/blog",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Best Way To Hire A Private Investigator",
+      item: "https://watsonpiinvestigation.com/blog/best-way-to-hire-a-private-investigator",
+    },
+  ],
+};
+
 export const BestWayToHireAPrivateInvestigator = () => {
   return (
     <div>
@@ -38,8 +63,11 @@ export const BestWayToHireAPrivateInvestigator = () => {
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
-      <PageHero image={LA} title="BLOG" imageAlt="Best way to hire a private investigator blog article" />
+      <PageHero image={LA} title="BLOG" imageAlt="Best way to hire a private investigator blog article" headingLevel="h2" />
 
       {/* Content */}
       <div className="p-6 sm:p-8 md:p-12 lg:p-16">
@@ -49,7 +77,7 @@ export const BestWayToHireAPrivateInvestigator = () => {
             to="/blog"
             className="inline-flex items-center text-yellow-500 hover:text-yellow-600 font-semibold mb-6 transition-colors"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
             </svg>
             Back to Blog
@@ -67,9 +95,9 @@ export const BestWayToHireAPrivateInvestigator = () => {
             <div className="p-6 sm:p-8">
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-6">
-                <Link to="/blog/search?tag=hire private investigator" className="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full hover:bg-yellow-500 hover:text-white transition-colors">hire private investigator</Link>
-                <Link to="/blog/search?tag=how to hire a pi" className="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full hover:bg-yellow-500 hover:text-white transition-colors">how to hire a pi</Link>
-                <Link to="/blog/search?tag=best ways to hire a pi" className="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full hover:bg-yellow-500 hover:text-white transition-colors">best ways to hire a pi</Link>
+                <Link to="/blog/search?tag=hire private investigator" className="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full hover:bg-yellow-500 hover:text-gray-900 transition-colors">hire private investigator</Link>
+                <Link to="/blog/search?tag=how to hire a pi" className="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full hover:bg-yellow-500 hover:text-gray-900 transition-colors">how to hire a pi</Link>
+                <Link to="/blog/search?tag=best ways to hire a pi" className="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full hover:bg-yellow-500 hover:text-gray-900 transition-colors">best ways to hire a pi</Link>
               </div>
 
               {/* Article Content */}

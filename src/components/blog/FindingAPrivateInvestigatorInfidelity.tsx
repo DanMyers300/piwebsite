@@ -21,6 +21,31 @@ const articleSchema = {
     "How to find a qualified private investigator for infidelity cases. Protect your interests with professional surveillance and evidence gathering.",
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://watsonpiinvestigation.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Blog",
+      item: "https://watsonpiinvestigation.com/blog",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Finding a Private Investigator for Infidelity Cases",
+      item: "https://watsonpiinvestigation.com/blog/finding-a-private-investigator-infidelity",
+    },
+  ],
+};
+
 export const FindingAPrivateInvestigatorInfidelity = () => {
   return (
     <div>
@@ -38,8 +63,11 @@ export const FindingAPrivateInvestigatorInfidelity = () => {
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
-      <PageHero image={LA} title="BLOG" imageAlt="Finding a private investigator for infidelity cases blog article" />
+      <PageHero image={LA} title="BLOG" imageAlt="Finding a private investigator for infidelity cases blog article" headingLevel="h2" />
 
       {/* Content */}
       <div className="p-6 sm:p-8 md:p-12 lg:p-16">
@@ -49,7 +77,7 @@ export const FindingAPrivateInvestigatorInfidelity = () => {
             to="/blog"
             className="inline-flex items-center text-yellow-500 hover:text-yellow-600 font-semibold mb-6 transition-colors"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
             </svg>
             Back to Blog
@@ -67,8 +95,8 @@ export const FindingAPrivateInvestigatorInfidelity = () => {
             <div className="p-6 sm:p-8">
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-6">
-                <Link to="/blog/search?tag=private investigator infidelity" className="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full hover:bg-yellow-500 hover:text-white transition-colors">private investigator infidelity</Link>
-                <Link to="/blog/search?tag=infidelity private investigator" className="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full hover:bg-yellow-500 hover:text-white transition-colors">infidelity private investigator</Link>
+                <Link to="/blog/search?tag=private investigator infidelity" className="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full hover:bg-yellow-500 hover:text-gray-900 transition-colors">private investigator infidelity</Link>
+                <Link to="/blog/search?tag=infidelity private investigator" className="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full hover:bg-yellow-500 hover:text-gray-900 transition-colors">infidelity private investigator</Link>
               </div>
 
               {/* Article Content */}

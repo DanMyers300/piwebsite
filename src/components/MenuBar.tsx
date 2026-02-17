@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import logo from "../assets/logo.webp";
 
 // Menu items with their visibility breakpoints
@@ -34,15 +34,29 @@ const mobileHideClasses: Record<string, string> = {
 
 export const MenuBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      const firstLink = menuRef.current?.querySelector("a");
+      firstLink?.focus();
+
+      const handleEscape = (e: KeyboardEvent) => {
+        if (e.key === "Escape") setIsMenuOpen(false);
+      };
+      document.addEventListener("keydown", handleEscape);
+      return () => document.removeEventListener("keydown", handleEscape);
+    }
+  }, [isMenuOpen]);
 
   return (
-    <div className="h-16 sm:h-20 md:h-24 flex items-center justify-between font-semibold px-4 sm:px-8 md:px-12 lg:px-16 relative">
+    <nav aria-label="Main navigation" className="h-16 sm:h-20 md:h-24 flex items-center justify-between font-semibold px-4 sm:px-8 md:px-12 lg:px-16 relative">
       <Link to="/">
-        <img src={logo} alt="Logo" className="h-12 sm:h-14 md:h-16 cursor-pointer" />
+        <img src={logo} alt="Watson Private Investigation Services - Home" className="h-12 sm:h-14 md:h-16 cursor-pointer" />
       </Link>
 
       {/* Desktop Navigation - items show progressively */}
-      <nav className="hidden sm:flex items-center gap-3 md:gap-4 lg:gap-6">
+      <div className="hidden sm:flex items-center gap-3 md:gap-4 lg:gap-6">
         {menuItems.map((item) => (
           <Link
             key={item.to}
@@ -58,9 +72,11 @@ export const MenuBar = () => {
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="xl:hidden p-2 ml-2"
-          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
           <svg
+            aria-hidden="true"
             className="w-6 h-6"
             fill="none"
             strokeLinecap="round"
@@ -76,15 +92,17 @@ export const MenuBar = () => {
             )}
           </svg>
         </button>
-      </nav>
+      </div>
 
       {/* Mobile-only Hamburger (below sm) */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         className="sm:hidden p-2"
-        aria-label="Toggle menu"
+        aria-expanded={isMenuOpen}
+        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
       >
         <svg
+          aria-hidden="true"
           className="w-6 h-6"
           fill="none"
           strokeLinecap="round"
@@ -108,7 +126,12 @@ export const MenuBar = () => {
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={() => setIsMenuOpen(false)}
           />
-          <nav className="fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-40 flex flex-col gap-2 p-6 pt-20">
+          <div
+            ref={menuRef}
+            role="dialog"
+            aria-label="Navigation menu"
+            className="fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-40 flex flex-col gap-2 p-6 pt-20"
+          >
             {menuItems.map((item) => (
               <Link
                 key={item.to}
@@ -119,9 +142,9 @@ export const MenuBar = () => {
                 {item.label}
               </Link>
             ))}
-          </nav>
+          </div>
         </>
       )}
-    </div>
+    </nav>
   );
 };

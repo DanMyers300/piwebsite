@@ -30,7 +30,7 @@ export const Footer = () => {
             <h3 className="text-white text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2 text-sm">
               <p>
-                <a href="tel:512-801-9754" className="hover:text-yellow-500 transition-colors">512-801-9754</a>
+                <a href="tel:512-801-9754" aria-label="Call 512-801-9754" className="hover:text-yellow-500 transition-colors">512-801-9754</a>
               </p>
               <p>
                 <a href="mailto:watsonpi2003@yahoo.com" className="hover:text-yellow-500 transition-colors">watsonpi2003@yahoo.com</a>
@@ -43,6 +43,7 @@ export const Footer = () => {
                   className="inline-flex items-center gap-2 text-yellow-500 hover:text-yellow-400 transition-colors"
                 >
                   <svg
+                    aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4"
                     viewBox="0 0 20 20"
@@ -73,6 +74,7 @@ export const Footer = () => {
             aria-label="Back to top"
           >
             <svg
+              aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 text-white"
               fill="none"

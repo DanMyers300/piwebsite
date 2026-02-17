@@ -61,10 +61,14 @@ export const ServicesInclude = () => {
 
         <div className="flex flex-col md:flex-row gap-6 md:gap-8">
           {/* Sidebar Navigation */}
-          <nav className="flex flex-row md:flex-col flex-wrap gap-2 md:gap-3 md:w-48 shrink-0">
+          <div role="tablist" aria-label="Services" className="flex flex-row md:flex-col flex-wrap gap-2 md:gap-3 md:w-48 shrink-0">
             {services.map((service) => (
               <button
                 key={service.id}
+                role="tab"
+                id={`tab-${service.id}`}
+                aria-selected={activeService === service.id}
+                aria-controls={`panel-${service.id}`}
                 onClick={() => setActiveService(service.id)}
                 className={`text-left px-4 py-2 rounded font-semibold transition-colors text-sm sm:text-base ${
                   activeService === service.id
@@ -75,19 +79,23 @@ export const ServicesInclude = () => {
                 {service.label}
               </button>
             ))}
-          </nav>
+          </div>
 
-          {/* Content Area - renders all, shows active */}
-          <div className="flex-1 relative">
+          {/* Content Area */}
+          <div className="flex-1">
             {services.map((service) => (
               <div
                 key={service.id}
-                className={`${activeService === service.id ? "relative" : "absolute top-0 left-0 right-0 invisible"}`}
+                role="tabpanel"
+                id={`panel-${service.id}`}
+                aria-labelledby={`tab-${service.id}`}
+                hidden={activeService !== service.id}
               >
                 {/* Image */}
                 <img
                   src={service.image}
                   alt={service.label}
+                  loading="lazy"
                   className="w-full h-64 sm:h-80 object-cover rounded-lg shadow-lg mb-6"
                 />
 
