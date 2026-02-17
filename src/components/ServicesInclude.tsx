@@ -95,6 +95,7 @@ export const ServicesInclude = () => {
                 <img
                   src={service.image}
                   alt={service.label}
+                  loading="lazy"
                   className="w-full h-64 sm:h-80 object-cover rounded-lg shadow-lg mb-6"
                 />
 

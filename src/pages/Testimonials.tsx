@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import LA from "../assets/LA.webp";
 import { PageHero } from "../components/PageHero";
 import { ContactForm } from "../components/ContactForm";
@@ -9,6 +10,18 @@ const testimonialsHighlights = [
   "Austin American Statesman Jobs Section",
 ];
 
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Watson Private Investigation Services Inc.",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    ratingCount: "8",
+  },
+};
+
 export const Testimonials = () => {
   return (
     <div>
@@ -17,6 +30,11 @@ export const Testimonials = () => {
         description="Read what clients say about Watson Private Investigation Services. Real testimonials from satisfied customers."
         path="/testimonials"
       />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(reviewSchema)}
+        </script>
+      </Helmet>
       <PageHero image={LA} title="TESTIMONIALS" imageAlt="Client testimonials for Watson Private Investigation Services" />
 
       {/* Content */}

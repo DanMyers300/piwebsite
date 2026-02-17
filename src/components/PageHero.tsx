@@ -12,6 +12,7 @@ export const PageHero = ({ image, title, imageAlt = "Hero image", headingLevel =
       <img
         src={image}
         alt={imageAlt}
+        loading="lazy"
         className="w-full h-full object-cover object-top"
         style={{
           animation: "pulseZoom 8s ease-in-out infinite",
