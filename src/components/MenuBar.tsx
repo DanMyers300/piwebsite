@@ -38,7 +38,7 @@ export const MenuBar = () => {
   return (
     <div className="h-16 sm:h-20 md:h-24 flex items-center justify-between font-semibold px-4 sm:px-8 md:px-12 lg:px-16 relative">
       <Link to="/">
-        <img src={logo} alt="Logo" className="h-12 sm:h-14 md:h-16 cursor-pointer" />
+        <img src={logo} alt="Watson Private Investigation Services logo" className="h-12 sm:h-14 md:h-16 cursor-pointer" />
       </Link>
 
       {/* Desktop Navigation - items show progressively */}

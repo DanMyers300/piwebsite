@@ -17,7 +17,7 @@ export const Testimonials = () => {
         description="Read what clients say about Watson Private Investigation Services. Real testimonials from satisfied customers."
         path="/testimonials"
       />
-      <PageHero image={LA} title="TESTIMONIALS" imageAlt="Los Angeles" />
+      <PageHero image={LA} title="TESTIMONIALS" imageAlt="Client testimonials for Watson Private Investigation Services" />
 
       {/* Content */}
       <div className="p-6 sm:p-8 md:p-12 lg:p-16">

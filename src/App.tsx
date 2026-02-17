@@ -36,9 +36,12 @@ const App = () => {
     <BrowserRouter>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-yellow-500 focus:text-white focus:font-bold">
+          Skip to main content
+        </a>
         <Header />
         <MenuBar />
-        <div className="flex-grow">
+        <main id="main-content" className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -54,7 +57,7 @@ const App = () => {
             <Route path="/admin" element={<ExternalRedirect url="https://cloud.umami.is" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </div>
+        </main>
         <Footer />
       </div>
     </BrowserRouter>

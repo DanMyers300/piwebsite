@@ -64,7 +64,7 @@ export const Contact = () => {
         description="Get in touch with Watson Private Investigation Services. Free confidential consultation. Call or fill out our contact form."
         path="/contact"
       />
-      <PageHero image={LA} title="CONTACT US" imageAlt="Los Angeles" />
+      <PageHero image={LA} title="CONTACT US" imageAlt="Contact Watson Private Investigation Services for a free consultation" />
 
       {/* Content */}
       <div className="p-6 sm:p-8 md:p-12 lg:p-16">

@@ -21,6 +21,31 @@ const articleSchema = {
     "Learn the common signs of a cheating spouse including routine changes, attire, cell phone behavior, and more from an experienced private investigator.",
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://watsonpiinvestigation.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Blog",
+      item: "https://watsonpiinvestigation.com/blog",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Signs of a Cheating Spouse",
+      item: "https://watsonpiinvestigation.com/blog/signs-of-a-cheating-spouse",
+    },
+  ],
+};
+
 export const SignsOfACheatingSpouse = () => {
   return (
     <div>
@@ -37,6 +62,9 @@ export const SignsOfACheatingSpouse = () => {
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
       <PageHero image={LA} title="BLOG" imageAlt="Signs of a cheating spouse blog article" />

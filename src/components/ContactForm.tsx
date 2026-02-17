@@ -76,71 +76,76 @@ export const ContactForm = ({
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="cf-firstName" className="block text-sm font-medium text-gray-700 mb-1">
               First Name *
             </label>
             <input
+              id="cf-firstName"
               type="text"
               name="firstName"
               required
               value={formData.firstName}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-offset-2"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="cf-lastName" className="block text-sm font-medium text-gray-700 mb-1">
               Last Name *
             </label>
             <input
+              id="cf-lastName"
               type="text"
               name="lastName"
               required
               value={formData.lastName}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-offset-2"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="cf-email" className="block text-sm font-medium text-gray-700 mb-1">
               Email *
             </label>
             <input
+              id="cf-email"
               type="email"
               name="email"
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-offset-2"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="cf-phone" className="block text-sm font-medium text-gray-700 mb-1">
               Phone *
             </label>
             <input
+              id="cf-phone"
               type="tel"
               name="phone"
               required
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-offset-2"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="cf-comments" className="block text-sm font-medium text-gray-700 mb-1">
               Questions or Comments
             </label>
             <textarea
+              id="cf-comments"
               name="comments"
               rows={4}
               value={formData.comments}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-offset-2"
             />
           </div>
 
@@ -153,13 +158,13 @@ export const ContactForm = ({
           </button>
 
           {status === "success" && (
-            <div className="p-3 bg-green-100 text-green-700 rounded">
+            <div role="alert" className="p-3 bg-green-100 text-green-700 rounded">
               Thank you! Your message has been sent successfully. We'll get back to you soon.
             </div>
           )}
 
           {status === "error" && (
-            <div className="p-3 bg-red-100 text-red-700 rounded">
+            <div role="alert" className="p-3 bg-red-100 text-red-700 rounded">
               {errorMessage}
             </div>
           )}

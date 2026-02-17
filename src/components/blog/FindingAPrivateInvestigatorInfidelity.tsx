@@ -21,6 +21,31 @@ const articleSchema = {
     "How to find a qualified private investigator for infidelity cases. Protect your interests with professional surveillance and evidence gathering.",
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://watsonpiinvestigation.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Blog",
+      item: "https://watsonpiinvestigation.com/blog",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Finding a Private Investigator for Infidelity Cases",
+      item: "https://watsonpiinvestigation.com/blog/finding-a-private-investigator-infidelity",
+    },
+  ],
+};
+
 export const FindingAPrivateInvestigatorInfidelity = () => {
   return (
     <div>
@@ -37,6 +62,9 @@ export const FindingAPrivateInvestigatorInfidelity = () => {
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
       <PageHero image={LA} title="BLOG" imageAlt="Finding a private investigator for infidelity cases blog article" />

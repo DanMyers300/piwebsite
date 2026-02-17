@@ -11,7 +11,7 @@ export const About = () => {
         description="Meet Dave Watson — former LAPD sergeant with extensive law enforcement experience. Learn about his background in investigations."
         path="/about"
       />
-      <PageHero image={LA} title="ABOUT US" imageAlt="Los Angeles" />
+      <PageHero image={LA} title="ABOUT US" imageAlt="About Watson Private Investigation Services in Los Angeles and Austin" />
 
       {/* Content */}
       <div className="p-6 sm:p-8 md:p-12 lg:p-16">

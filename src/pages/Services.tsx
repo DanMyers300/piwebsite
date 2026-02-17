@@ -32,7 +32,7 @@ export const Services = () => {
         description="Professional PI services including surveillance, infidelity investigation, background checks, insurance fraud, civil & criminal cases."
         path="/services"
       />
-      <PageHero image={LA} title="SERVICES" imageAlt="Los Angeles" />
+      <PageHero image={LA} title="SERVICES" imageAlt="Private investigation services including surveillance, background checks, and more" />
 
       {/* Content */}
       <div className="p-6 sm:p-8 md:p-12 lg:p-16">

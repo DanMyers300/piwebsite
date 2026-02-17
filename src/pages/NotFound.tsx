@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import LA from "../assets/LA.webp";
 import { PageHero } from "../components/PageHero";
+import { SEO } from "../components/SEO";
 
 export const NotFound = () => {
   return (
     <div>
-      <PageHero image={LA} title="PAGE NOT FOUND" imageAlt="Los Angeles" />
+      <SEO
+        title="Page Not Found | Watson PI Services"
+        description="The page you're looking for doesn't exist. Return to Watson Private Investigation Services for professional PI services."
+        path="/404"
+      />
+      <PageHero image={LA} title="PAGE NOT FOUND" imageAlt="Watson Private Investigation page not found" />
 
       <div className="p-6 sm:p-8 md:p-12 lg:p-16">
         <div className="max-w-3xl mx-auto text-center">

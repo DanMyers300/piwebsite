@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import LA from "../assets/LA.webp";
 import { PageHero } from "../components/PageHero";
 import { ContactForm } from "../components/ContactForm";
@@ -38,6 +39,19 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export const FAQs = () => {
   return (
     <div>
@@ -46,7 +60,12 @@ export const FAQs = () => {
         description="Frequently asked questions about hiring a private investigator, costs, confidentiality, and our investigation process."
         path="/faqs"
       />
-      <PageHero image={LA} title="FAQs" imageAlt="Los Angeles" />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
+      <PageHero image={LA} title="FAQs" imageAlt="Frequently asked questions about private investigation services" />
 
       {/* Content */}
       <div className="p-6 sm:p-8 md:p-12 lg:p-16">

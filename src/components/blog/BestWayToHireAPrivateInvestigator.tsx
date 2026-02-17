@@ -21,6 +21,31 @@ const articleSchema = {
     "Expert tips on hiring a private investigator — check licensing, meet in person, verify references, and find the right PI for your case.",
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://watsonpiinvestigation.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Blog",
+      item: "https://watsonpiinvestigation.com/blog",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Best Way To Hire A Private Investigator",
+      item: "https://watsonpiinvestigation.com/blog/best-way-to-hire-a-private-investigator",
+    },
+  ],
+};
+
 export const BestWayToHireAPrivateInvestigator = () => {
   return (
     <div>
@@ -37,6 +62,9 @@ export const BestWayToHireAPrivateInvestigator = () => {
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
       <PageHero image={LA} title="BLOG" imageAlt="Best way to hire a private investigator blog article" />
