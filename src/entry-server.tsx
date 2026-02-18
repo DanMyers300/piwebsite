@@ -1,0 +1,19 @@
+import { renderToString } from "react-dom/server";
+import { StaticRouter } from "react-router";
+import { HelmetProvider } from "react-helmet-async";
+import type { HelmetServerState } from "react-helmet-async";
+import { AppShell } from "./App.tsx";
+
+export function render(url: string) {
+  const helmetContext: { helmet?: HelmetServerState } = {};
+
+  const html = renderToString(
+    <HelmetProvider context={helmetContext}>
+      <StaticRouter location={url}>
+        <AppShell />
+      </StaticRouter>
+    </HelmetProvider>
+  );
+
+  return { html, helmet: helmetContext.helmet! };
+}
