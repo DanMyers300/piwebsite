@@ -8,8 +8,8 @@ export const Blog = () => {
   return (
     <div>
       <SEO
-        title="Blog | Watson PI Services"
-        description="Expert articles on private investigation, infidelity signs, hiring a PI, and more from Watson Private Investigation Services."
+        title="Private Investigator Blog | Tips & Advice | Watson PI Services"
+        description="Expert articles on private investigation — infidelity signs, how to hire a PI, surveillance tips, and more from a licensed private investigator in Austin, TX."
         path="/blog"
       />
       <PageHero image={LA} title="BLOG" imageAlt="Los Angeles" />

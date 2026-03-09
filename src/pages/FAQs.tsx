@@ -56,8 +56,8 @@ export const FAQs = () => {
   return (
     <div>
       <SEO
-        title="FAQs | Watson PI Services"
-        description="Frequently asked questions about hiring a private investigator, costs, confidentiality, and our investigation process."
+        title="Private Investigator FAQs | Costs, Process & More | Watson PI Services"
+        description="Frequently asked questions about hiring a private investigator in Austin, TX — costs, surveillance process, confidentiality, and what to expect."
         path="/faqs"
       />
       <Helmet>

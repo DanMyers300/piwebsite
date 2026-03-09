@@ -28,8 +28,8 @@ export const Services = () => {
   return (
     <div>
       <SEO
-        title="Services | Watson PI Services"
-        description="Professional PI services including surveillance, infidelity investigation, background checks, insurance fraud, civil & criminal cases."
+        title="Private Investigator Services Austin TX | Surveillance, Background Checks & More"
+        description="Professional private investigator services in Austin, TX — surveillance, infidelity investigations, background checks, insurance fraud, criminal & civil cases."
         path="/services"
       />
       <PageHero image={LA} title="SERVICES" imageAlt="Private investigation services including surveillance, background checks, and more" />

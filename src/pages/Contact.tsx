@@ -60,8 +60,8 @@ export const Contact = () => {
   return (
     <div>
       <SEO
-        title="Contact Us | Watson PI Services"
-        description="Get in touch with Watson Private Investigation Services. Free confidential consultation. Call or fill out our contact form."
+        title="Contact a Private Investigator in Austin TX | Free Consultation | Watson PI"
+        description="Contact Watson Private Investigation Services in Austin, TX. Free confidential consultation with a licensed private investigator. Call or fill out our contact form."
         path="/contact"
       />
       <PageHero image={LA} title="CONTACT US" imageAlt="Contact Watson Private Investigation Services for a free consultation" />

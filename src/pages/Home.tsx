@@ -36,22 +36,17 @@ const organizationSchema = {
       name: "Austin",
       addressRegion: "TX",
     },
-    {
-      "@type": "City",
-      name: "Los Angeles",
-      addressRegion: "CA",
-    },
   ],
   description:
-    "Licensed private investigator offering surveillance, background checks, infidelity investigations, missing persons, and more. Over 23 years of experience with LAPD and private investigations.",
+    "Licensed private investigator in Austin, TX offering surveillance, background checks, infidelity investigations, missing persons, and more. Over 23 years of experience with LAPD and private investigations.",
 };
 
 export const Home = () => {
   return (
     <>
       <SEO
-        title="Watson Private Investigation Services"
-        description="Licensed private investigator in Los Angeles & Austin. Surveillance, background checks, infidelity investigations & more. Free consultation."
+        title="Private Investigator in Austin TX | Watson PI Services"
+        description="Licensed private investigator in Austin, TX. Surveillance, background checks, infidelity investigations, missing persons & more. Call for a free consultation."
         path="/"
       />
       <Helmet>

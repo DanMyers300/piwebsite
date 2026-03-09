@@ -7,11 +7,11 @@ export const About = () => {
   return (
     <div>
       <SEO
-        title="About Us | Watson PI Services"
-        description="Meet Dave Watson — former LAPD sergeant with extensive law enforcement experience. Learn about his background in investigations."
+        title="About Our Licensed Private Investigator | Dave Watson | Watson PI Services"
+        description="Meet Dave Watson — licensed private investigator and former LAPD sergeant with 23+ years of law enforcement and investigation experience serving Austin, TX."
         path="/about"
       />
-      <PageHero image={LA} title="ABOUT US" imageAlt="About Watson Private Investigation Services in Los Angeles and Austin" />
+      <PageHero image={LA} title="ABOUT US" imageAlt="About Watson Private Investigation Services — licensed private investigator in Austin, TX" />
 
       {/* Content */}
       <div className="p-6 sm:p-8 md:p-12 lg:p-16">
